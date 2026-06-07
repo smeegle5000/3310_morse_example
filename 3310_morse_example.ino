@@ -7,6 +7,7 @@ HardwareSerial RF_SERIAL(PC11, PC10);
 #define PIN_RF_POWER   PC13
 #define PIN_RF_PTT     PC0
 #define PIN_AUDIO      PA4
+#define PIN_AUDIO_IN   PA1  //unused
 
 #define DISP_PIN_SCK PB3
 #define DISP_PIN_SDIN PB5
@@ -107,7 +108,7 @@ void sendMorse(const char* msg) {
 
 void setup() {
   u8g2.begin();
-  u8g2.setContrast(170);
+  u8g2.setContrast(110);
   u8g2.setFontMode(1);
   u8g2.setBitmapMode(1);
   u8g2.setFont(u8g2_font_NokiaLargeBold_tr);
@@ -125,7 +126,7 @@ void setup() {
   pinMode(PIN_RF_PTT, OUTPUT);
 
   digitalWrite(PIN_RF_PTT, HIGH);
-  digitalWrite(PIN_RF_POWER, LOW);
+  digitalWrite(PIN_RF_POWER, HIGH); //high = low power
   digitalWrite(PIN_RF_ENABLE, LOW);
 
   delay(100);
