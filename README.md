@@ -1,1 +1,1 @@
-this project is a working proof of concept as a relaively barebones example to transmit morse code from the [nokia 3310 M17 mainboard replacement](https://github.com/M17-Project/M17_3310), mostly here for my own reference
+this project is a working proof of concept as a relaively barebones example to transmit and recieve morse code from the [nokia 3310 M17 mainboard replacement](https://github.com/M17-Project/M17_3310), mostly here for my own reference
